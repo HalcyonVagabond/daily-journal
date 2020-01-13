@@ -1,23 +1,74 @@
-header h1 {
-    display: flex;
-    justify-content: center;
-    border: 10px solid black;
-    background-color: yellowgreen;
+body {
+    background-color: #B5DAE7;
 }
 
-nav {
+
+header {
+    position: relative;
+}
+
+/* top image*/
+
+.banner-image { 
+    position: absolute;
+    width: 100%;
+    border: 2px groove grey;
+    box-shadow: 2px 2px 2px grey;
+    z-index: -1;
+}
+
+header h1 {
+    /* display: flex;
+    justify-content: center;
+    align-content: center; */
+    text-align: center;
+    text-shadow: 2px 2px 2px grey;
+    color: grey;
+    border: 4px solid grey;
+    /* background-color: yellowgreen; */
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 40px;
+}
+
+nav ul {
     display: flex;
+    list-style: none;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-left: 5%;
+    margin: 5%;
+    position: relative;
+    top: 80px;
+}
+
+nav a {
+    color: grey;
+    border: 2px solid grey;
+    background-color: #AED89C;
+    padding: 6px;
 }
 
 fieldset {
     display: flex;
     flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 
 form {
     border: 2px ridge black;
-    background-color: yellowgreen;
+    background-color: #AED89C;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    position: relative;
+    top: 120px;
+}
+
+.submit { 
+    margin-left: auto;
+    margin-right: auto;
 }
