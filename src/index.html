@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,46 +8,70 @@
     <title>My NSS Journal</title>
     <link rel="stylesheet" href="styles/journal.css">
 </head>
+
 <body>
-    <header>
-        <h1>
-            Daily Journal
-        </h1>
-    </header>
-    <form action="">
-        <fieldset>
-            <label for="journalDate" id="journalDate">Date of entry</label>
-            <input type="date" name="journalDate" id="journalDate">
-        </fieldset>
-        <fieldset>
-            <label for="conceptsCovered" id="coneptsCovered">Concepts covered</label>
-            <input type="text" name="conceptsCovered" id="conceptsCovered">
-        </fieldset>
-        <fieldset>
-            <label for="journalEntry" id="journalEntry">Journal Entry</label>
-            <textarea></textarea>
-        </fieldset>
-        <fieldset>
-            <label for="moodForTheDay" id="moodForTheDay">Mood for the day</label>
-            <select>
-                 <option value="1">Zen</option>
-                 <option value="2">Calm</option>
-                 <option value="3">Happy</option>
-                 <option value="4">Hopeful</option>
-                 <option value="5">Numb</option>
-                 <option value="6">Fine</option>
-                 <option value="7">Anxious</option>
-                 <option value="8">Nervous</option>
-                 <option value="9">Stressed</option>
-                 <option value="10">Angry</option>
-                 <option value="11">Sad</option>
-                 <option value="12">Hallucinating</option>
-                 <option value="13">Everything is FINE!!!</option>
-            </select>
-        </fieldset>
-        <input type="submit" value="submit entry">
-    </form>
+    <!-- <div id="backgroundImage">
+        <img src="/src/images/Tahoe.jpg" alt="Me at Lake Tahoe">
+    </div> -->
+    <div>
+        <header>
+            <!-- <img class="banner-image" src="/src/images/BigSur.JPG" alt="Big Sur"> -->
+            <h1>
+                JAM's Daily Journal
+            </h1>
+            <!-- <nav id="main-nav">
+                <ul id="navigation">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Timeline</a></li>
+                    <li><a href="#">Lessons</a></li>
+                    <li><a href="#">Projects</a></li>
+                </ul>
+            </nav> -->
+        </header>
+    </div>
+    <div id="formContainer">
+        <form name="theForm" action="">
+            <fieldset form="theForm" id="date">
+                <label for="journalDate">Date of entry</label>
+                <input type="date" name="journalDate" id="journalDate">
+            </fieldset>
+            <fieldset form="theForm" id="concepts">
+                <label for="conceptsCovered">Concepts covered</label>
+                <input type="text" name="conceptsCovered" id="conceptsCovered">
+            </fieldset>
+            <fieldset form="theForm" id="mainEntry">
+                <label for="journalEntry">Journal Entry</label>
+                <textarea name="journalEntry" id="journalEntry">Type Here</textarea>
+            </fieldset>
+            <fieldset form="theForm" id="mood">
+                <label for="moodForTheDay">Mood for the day</label>
+                <select name="moodForTheDay" id="moodForTheDay" >
+                    <option value="1">Zen</option>
+                    <option value="2">Calm</option>
+                    <option value="3">Happy</option>
+                    <option value="4">Hopeful</option>
+                    <option value="5">Numb</option>
+                    <option value="6">Fine</option>
+                    <option value="7">Anxious</option>
+                    <option value="8">Nervous</option>
+                    <option value="9">Stressed</option>
+                    <option value="10">Angry</option>
+                    <option value="11">Sad</option>
+                    <option value="12">Hallucinating</option>
+                    <option value="13">Everything is FINE!!!</option>
+                </select>
+            </fieldset>
+            <input class="submit" type="submit" value="submit entry" onclick="submitEntry()">
+        </form>
+    </div>
 
+    <div id="entryContainer">
+        <p id="postText">
 
+        </p>
+    </div>
+
+    <script type="module" src="/src/scripts/journal.js"></script>
 </body>
+
 </html>
