@@ -13,6 +13,8 @@
     <!-- <div id="backgroundImage">
         <img src="/src/images/Tahoe.jpg" alt="Me at Lake Tahoe">
     </div> -->
+
+    <!-- Banner -->
     <div>
         <header>
             <!-- <img class="banner-image" src="/src/images/BigSur.JPG" alt="Big Sur"> -->
@@ -29,6 +31,8 @@
             </nav> -->
         </header>
     </div>
+
+    <!-- Journal Entry Form -->
     <div id="formContainer">
         <form name="theForm" action="">
             <fieldset form="theForm" id="date">
@@ -45,7 +49,7 @@
             </fieldset>
             <fieldset form="theForm" id="mood">
                 <label for="moodForTheDay">Mood for the day</label>
-                <select name="moodForTheDay" id="moodForTheDay" >
+                <select name="moodForTheDay" id="moodForTheDay">
                     <option value="1">Zen</option>
                     <option value="2">Calm</option>
                     <option value="3">Happy</option>
@@ -64,12 +68,10 @@
             <input class="submit" type="submit" value="submit entry" onclick="submitEntry()">
         </form>
     </div>
+    <!-- Past Entries -->
+    <article id="entryContainer">
 
-    <div id="entryContainer">
-        <p id="postText">
-
-        </p>
-    </div>
+    </article>
 
     <script type="module" src="/src/scripts/journal.js"></script>
 </body>
