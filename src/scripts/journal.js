@@ -21,19 +21,78 @@
 
 // **** Journal Exercise 2 *****//
 
-const journalEntry = {
+// const journalEntry = {
+//     date: "01/18/2020",
+//     conceptsCovered: "Objects and Functions",
+//     entry: "I am going to get this!",
+//     mood: "Zen"
+// }
+
+// const entryContainer = []
+
+// const pushEntry = function (entry) {
+//     entryContainer.push(entry)
+// }
+
+// pushEntry(journalEntry)
+
+// console.log(entryContainer)
+
+
+// ****************************
+// Journal Entry Exercise 3
+
+
+
+const journalEntries = [
+    {
     date: "01/18/2020",
-    conceptsCovered: "Objects and Functions",
+    concept: "Objects and Functions",
+    entry: "I am going to get this!",
+    mood: "Zen"
+}, {
+    date: "01/20/2020",
+    concept: "Creating Components",
+    entry: "I am going to get this!",
+    mood: "Excited"
+},
+{
+    date: "01/21/2020",
+    concept: "APIs and Fetching",
     entry: "I am going to get this!",
     mood: "Zen"
 }
+];
 
-const entryContainer = []
+// ***Creating reference to HTML entry container***
 
-const pushEntry = function (entry) {
-    entryContainer.push(entry)
-}
+const entryContainer = document.querySelector("#entryContainer")
 
-pushEntry(journalEntry)
 
-console.log(entryContainer)
+// ***Function that creates HTML element***
+const entryHTML = (tag, content, className) => {
+    return `<${tag} class=${className}>${content}</${tag}>`;
+};
+
+const moodHTML = (tag, content, className) => {
+            return `<${tag} class=${className}>Mood = "${content}"</${tag}>`
+};
+
+// ***Function for whole entry component***
+
+const createEntryComponent = (entry) => `
+    <div id="entry">
+        ${entryHTML("h1", entry.date, "entryDate")}
+        ${entryHTML("h2", entry.concept, "entryConcept")}
+        ${moodHTML("h2", entry.mood, "entryMood")}
+        ${entryHTML("p", entry.entry, "entryMain")}
+    </div>
+`
+for (let i = 0; i < journalEntries.length; i++) {
+        const entry = journalEntries[i]
+        entryContainer.innerHTML += createEntryComponent(entry)
+};
+
+// ]const addToDOM = (entry) => entryContainer.innerHTML += createEntryComponent(entry);
+
+// journalEntries.forEach(addToDOM());
