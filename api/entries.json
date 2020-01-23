@@ -1,0 +1,25 @@
+{
+    "entries": [
+        {
+            "date": "01/18/2020",
+            "concept": "Objects and Functions",
+            "entry": "I am going to get this!",
+            "mood": "Zen",
+            "id": 1
+        },
+        {
+            "date": "01/20/2020",
+            "concept": "Creating Components",
+            "entry": "I am going to get this!",
+            "mood": "Excited",
+            "id": 2
+        },
+        {
+            "date": "01/21/2020",
+            "concept": "APIs and Fetching",
+            "entry": "I am going to get this!",
+            "mood": "Zen",
+            "id": 3
+        }
+    ]
+}
