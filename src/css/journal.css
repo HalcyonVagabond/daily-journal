@@ -1,4 +1,6 @@
-body {
+
+
+body {  
     /* background-image: #B5DAE7; */
     background-image: url(/src/images/Tahoe.jpg);
     background-size: cover;
@@ -14,7 +16,8 @@ header {
     height: 100px;
     top: 0;
     margin-top: 5px;
-    opacity: 0.8;
+    /* opacity: 0.8; */
+    z-index: 1;
     
 }
 
@@ -99,18 +102,22 @@ form {
     border: 2px ridge black;
     background-color: rgba(174,216,156,0.67);
 
-    width: 80%;
+   
+
+    width: 76%;
+    padding: 2%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
     margin-bottom: 10px;
 };
 
-#entryDate {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: center;
+#entry .entryDate {
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* display: flex;
+    justify-content: center; */
+    /* text-align: center; */
 };
 
 
