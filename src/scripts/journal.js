@@ -1,9 +1,21 @@
 
 
+// ***************************************************
+//            Begin Journal Exercise 5
+// ***************************************************
+import API from "./data.js"
+import createHTML from "./entryComponent.js"
+import addToDOM from "./entriesDOM.js"
 
 
+API.getJournalEntries().then(entries => iterateAndAdd(entries))
 
-
+const iterateAndAdd = (entries) => {
+    entries.forEach(entry => {
+        const entryHTML = createHTML.createEntryComponent(entry)
+        addToDOM.addEntryToDom(entryHTML)
+    })
+}
 
 // *******************************************************
 //            Begin Journal Exercise 2
@@ -123,49 +135,49 @@
 
 // *******************************************************
 //            Begin Journal Exercise 4
-// *******************************************************
+// // *******************************************************
 
-const url = "http://localhost:8088/entries"
-//  From 3
-
-
-// ***Creating reference to HTML entry container***
-
-const entryContainer = document.querySelector("#entryContainer")
+// const url = "http://localhost:8088/entries"
+// //  From 3
 
 
-// ***Function that creates HTML element***
-const entryHTML = (tag, content, className) => {
-    return `<${tag} class=${className}>${content}</${tag}>`;
-};
+// // ***Creating reference to HTML entry container***
 
-const moodHTML = (tag, content, className) => {
-            return `<${tag} class=${className}>Mood = "${content}"</${tag}>`
-};
+// const entryContainer = document.querySelector("#entryContainer")
 
-// ***Function for whole entry component***
 
-const createEntryComponent = (entry) => `
-    <div id="entry">
-        ${entryHTML("h1", entry.date, "entryDate")}
-        ${entryHTML("h2", entry.concept, "entryConcept")}
-        ${moodHTML("h2", entry.mood, "entryMood")}
-        ${entryHTML("p", entry.entry, "entryMain")}
-    </div>
-`
-const addEntryToDom = (htmlTemplate) => {
-        entryContainer.innerHTML += htmlTemplate
-};
+// // ***Function that creates HTML element***
+// const entryHTML = (tag, content, className) => {
+//     return `<${tag} class=${className}>${content}</${tag}>`;
+// };
 
-fetch(url)
-    .then(entriesData => entriesData.json())
-    .then(entries => {
-        entries.forEach(entry => {
-            const entryHTML = createEntryComponent(entry)
-            addEntryToDom(entryHTML)
-        })
-    });
+// const moodHTML = (tag, content, className) => {
+//             return `<${tag} class=${className}>Mood = "${content}"</${tag}>`
+// };
 
-// ]const addToDOM = (entry) => entryContainer.innerHTML += createEntryComponent(entry);
+// // ***Function for whole entry component***
+
+// const createEntryComponent = (entry) => `
+//     <div id="entry">
+//         ${entryHTML("h1", entry.date, "entryDate")}
+//         ${entryHTML("h2", entry.concept, "entryConcept")}
+//         ${moodHTML("h2", entry.mood, "entryMood")}
+//         ${entryHTML("p", entry.entry, "entryMain")}
+//     </div>
+// `
+// const addEntryToDom = (htmlTemplate) => {
+//         entryContainer.innerHTML += htmlTemplate
+// };
+
+// fetch(url)
+//     .then(entriesData => entriesData.json())
+//     .then(entries => {
+//         entries.forEach(entry => {
+//             const entryHTML = createEntryComponent(entry)
+//             addEntryToDom(entryHTML)
+//         })
+//     });
+
+// const addToDOM = (entry) => entryContainer.innerHTML += createEntryComponent(entry);
 
 // journalEntries.forEach(addToDOM());
