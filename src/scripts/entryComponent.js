@@ -1,10 +1,22 @@
 
+const createObjects = {
+    // ****Function that creates entry object****
+    entryObjectFactory (date, concepts, entry, mood) {
+        return {
+            'date': date,
+            'concepts': concepts,
+            'entry': entry,
+            'mood': mood
+        }
+    }
+}
+
+
 const createHTML = {
-    // ***Function that creates HTML element***
+    // ***Functions that creates HTML element***
     entryHTML(tag, content, className) {
         return `<${tag} class=${className}>${content}</${tag}>`;
     },
-
     moodHTML(tag, content, className) {
         return `<${tag} class=${className}>Mood = "${content}"</${tag}>`
     },
@@ -15,12 +27,13 @@ const createHTML = {
     return `
     <div id="entry">
         ${this.entryHTML("h1", entry.date, "entryDate")}
-        ${this.entryHTML("h2", entry.concept, "entryConcept")}
+        ${this.entryHTML("h2", entry.concepts, "entryConcept")}
         ${this.moodHTML("h2", entry.mood, "entryMood")}
         ${this.entryHTML("p", entry.entry, "entryMain")}
+        <button id='deleteBtn-${entry.id}' class='button'>Delete Entry</button>
     </div>
     `
     }
 }
 
-export default createHTML
+export {createHTML, createObjects}

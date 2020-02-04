@@ -1,21 +1,27 @@
 
+//  ************************************************
+//             Begin Journal Exercise 7
+// **************************************************
 
-// ***************************************************
-//            Begin Journal Exercise 5
-// ***************************************************
-import API from "./data.js"
-import createHTML from "./entryComponent.js"
+// Importing Object Functions
+
+import dbAPI from "./data.js"
 import addToDOM from "./entriesDOM.js"
+import eventListeners from "./eventListeners.js"
 
 
-API.getJournalEntries().then(entries => iterateAndAdd(entries))
+// naming the function that pulls all of my past entries from the database
+const pastEntries = () => dbAPI.getJournalEntries().then(entries => addToDOM.iterateAndAddToTop(entries))
+// calling pastEntries to where the page auto-populates with my past entries
+pastEntries()
 
-const iterateAndAdd = (entries) => {
-    entries.forEach(entry => {
-        const entryHTML = createHTML.createEntryComponent(entry)
-        addToDOM.addEntryToDom(entryHTML)
-    })
-}
+// calling submit and delete event listeners
+
+eventListeners.submitEventListener()
+
+eventListeners.deleteEntryEventListener()
+
+
 
 // *******************************************************
 //            Begin Journal Exercise 2
@@ -181,3 +187,21 @@ const iterateAndAdd = (entries) => {
 // const addToDOM = (entry) => entryContainer.innerHTML += createEntryComponent(entry);
 
 // journalEntries.forEach(addToDOM());
+
+
+// ***************************************************
+//            Begin Journal Exercise 5 & 6
+// ***************************************************
+// import API from "./data.js"
+// import createHTML from "./entryComponent.js"
+// import addToDOM from "./entriesDOM.js"
+
+
+// API.getJournalEntries().then(entries => iterateAndAdd(entries))
+
+// const iterateAndAdd = (entries) => {
+//     entries.forEach(entry => {
+//         const entryHTML = createHTML.createEntryComponent(entry)
+//         addToDOM.addEntryToDom(entryHTML)
+//     })
+// }

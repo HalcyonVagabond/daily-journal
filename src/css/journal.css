@@ -80,6 +80,10 @@ fieldset {
 }
 
 form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     border: 2px ridge black;
     background-color:  rgba(174,216,156,0.67);
     margin-left: auto;
@@ -88,9 +92,12 @@ form {
     position: relative;
 }
 
-.submit { 
-    margin-left: auto;
+#submit { 
+    text-align: center;
+    margin-left: 40%;
     margin-right: auto;
+    width: 100px;
+    height: 15px;
 }
 
 /*  **** END Fieldset and Input **** */
