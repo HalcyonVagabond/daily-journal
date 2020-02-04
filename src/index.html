@@ -43,28 +43,29 @@
             </fieldset>
             <fieldset form="theForm" id="mainEntry">
                 <label for="journalEntry">Journal Entry</label>
-                <textarea name="journalEntry" id="journalEntry">Type Here</textarea>
+                <textarea name="journalEntry" id="journalEntry" placeholder="Type Entry Here"></textarea>
             </fieldset>
             <fieldset form="theForm" id="mood">
                 <label for="moodForTheDay">Mood for the day</label>
                 <select name="moodForTheDay" id="moodForTheDay">
-                    <option value="1">Zen</option>
-                    <option value="2">Calm</option>
-                    <option value="3">Happy</option>
-                    <option value="4">Hopeful</option>
-                    <option value="5">Numb</option>
-                    <option value="6">Fine</option>
-                    <option value="7">Anxious</option>
-                    <option value="8">Nervous</option>
-                    <option value="9">Stressed</option>
-                    <option value="10">Angry</option>
-                    <option value="11">Sad</option>
-                    <option value="12">Hallucinating</option>
-                    <option value="13">Everything is FINE!!!</option>
+                    <option value="" selected disabled hidden>Select Mood</option>
+                    <option>Zen</option>
+                    <option>Calm</option>
+                    <option>Happy</option>
+                    <option>Hopeful</option>
+                    <option>Numb</option>
+                    <option>Fine</option>
+                    <option>Anxious</option>
+                    <option>Nervous</option>
+                    <option>Stressed</option>
+                    <option>Angry</option>
+                    <option>Sad</option>
+                    <option>Hallucinating</option>
+                    <option>Everything is FINE!!!</option>
                 </select>
             </fieldset>
-            <input class="submit" type="submit" value="submit entry" onclick="submitEntry()">
         </form>
+        <button id="submit" class="button" type="button" value="submit entry">Submit Entry</button>
     </div>
     <!-- Past Entries -->
     <article id="entryContainer">
