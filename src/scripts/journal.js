@@ -1,6 +1,6 @@
 
 //  ************************************************
-//             Begin Journal Exercise 7
+//             Begin Journal Exercise 8
 // **************************************************
 
 // Importing Object Functions
@@ -8,10 +8,15 @@
 import dbAPI from "./data.js"
 import addToDOM from "./entriesDOM.js"
 import eventListeners from "./eventListeners.js"
+import createJournalForm from "./mainDOM.js"
+import addToDom from "./entriesDOM.js"
+import filterFunctions from "./filter.js"
 
 
+// populating DOM with journal form
+createJournalForm()
 // naming the function that pulls all of my past entries from the database
-const pastEntries = () => dbAPI.getJournalEntries().then(entries => addToDOM.iterateAndAddToTop(entries))
+const pastEntries = () => dbAPI.getJournalEntries().then(entries => addToDOM.renderEntriesToDOM(entries))
 // calling pastEntries to where the page auto-populates with my past entries
 pastEntries()
 
@@ -20,6 +25,10 @@ pastEntries()
 eventListeners.submitEventListener()
 
 eventListeners.deleteEntryEventListener()
+
+eventListeners.moodFilterEventListener()
+
+// addToDom.addMoodFilter()
 
 
 
@@ -205,3 +214,26 @@ eventListeners.deleteEntryEventListener()
 //         addToDOM.addEntryToDom(entryHTML)
 //     })
 // }
+
+
+//  ************************************************
+//             Begin Journal Exercise 7
+// **************************************************
+
+// Importing Object Functions
+
+// import dbAPI from "./data.js"
+// import addToDOM from "./entriesDOM.js"
+// import eventListeners from "./eventListeners.js"
+
+
+// // naming the function that pulls all of my past entries from the database
+// const pastEntries = () => dbAPI.getJournalEntries().then(entries => addToDOM.iterateAndAddToTop(entries))
+// // calling pastEntries to where the page auto-populates with my past entries
+// pastEntries()
+
+// // calling submit and delete event listeners
+
+// eventListeners.submitEventListener()
+
+// eventListeners.deleteEntryEventListener()
