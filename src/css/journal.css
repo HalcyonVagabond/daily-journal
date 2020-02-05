@@ -12,6 +12,8 @@ body {
 header {
     position: fixed;
     background-color: aliceblue;
+    border: 1px ridge black;
+    box-shadow: 3px 3px 3px 3px grey;
     width: 98%;
     height: 100px;
     top: 0;
@@ -34,9 +36,11 @@ header {
 
 header h1 {
     text-align: center;
-    text-shadow: 2px 2px 2px grey;
+    /* text-shadow: 2px 2px 2px grey; */
     color: grey;
+    background-color: rgba(174,216,156,0.67);
     border: 4px solid grey;
+    box-shadow: 2px 2px 2px grey;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -67,17 +71,30 @@ nav a {
 /* *** BEGIN Fieldset and Input *** */
 
 #formContainer {
-    margin-top: 120px;
+    margin-top: 140px;
     margin-bottom: 120px;
-    height: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 80%;
+    max-width: 650px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: aliceblue;
+    opacity: 80%;
+    border: 1px solid black;
+    border-radius: 15px;
+
 }
 
 fieldset {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
     background-color: rgba(174,216,156,0.67);
 }
 
@@ -119,27 +136,55 @@ legend {
 
 /* ****** Begin Past-Entry Format ******* */
 
-#entry {
-    border: 2px ridge black;
-    background-color: rgba(174,216,156,0.67);
+#entryContainer {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 80%;
+    max-width: 650px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: aliceblue;
+    opacity: 80%;
+    border: 1px solid black;
+    border-radius: 15px;
 
-   
-
+}
+.entry {
+    border: 1px ridge black;
+    border-radius: 15px;
+    background-color: rgba(174,216,156,0.80);
+    text-align: center;
     width: 76%;
     padding: 2%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    margin-bottom: 10px;
-};
+    margin-bottom: 20px;
+}
 
-/* #entry .entryDate {
+.entryDate {
+    background-color: antiquewhite;
+    border: 1px solid black;
+    opacity: 80%;
+    width: 40%;
     margin-left: auto;
-    margin-right: auto; 
-    display: flex;
-    justify-content: center; 
-    text-align: center;
-}; */
+    margin-right: auto;
+}
 
+
+.entryConcept {
+    /* border-top: 2px solid grey; */
+    border-bottom: 2px solid grey;
+    
+}
+
+.entryMood{
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* ****** END Past-Entry Format ******** */

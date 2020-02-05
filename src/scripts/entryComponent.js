@@ -15,22 +15,25 @@ const createObjects = {
 const createHTML = {
     // ***Functions that creates HTML element***
     entryHTML(tag, content, className) {
-        return `<${tag} class=${className}>${content}</${tag}>`;
+        return `<${tag} class='${className}'>${content}</${tag}>`;
     },
     moodHTML(tag, content, className) {
-        return `<${tag} class=${className}>Mood = "${content}"</${tag}>`
+        return `<${tag} class='${className}'>Mood = "${content}"</${tag}>`
     },
 
     // ***Function for whole entry component***
 
     createEntryComponent(entry) {
     return `
-    <div id="entry">
+    <div class="entry">
         ${this.entryHTML("h1", entry.date, "entryDate")}
         ${this.entryHTML("h2", entry.concepts, "entryConcept")}
-        ${this.moodHTML("h2", entry.mood, "entryMood")}
         ${this.entryHTML("p", entry.entry, "entryMain")}
-        <button id='deleteBtn-${entry.id}' class='button'>Delete Entry</button>
+        ${this.moodHTML("h2", entry.mood, "entryMood")}
+        <div class='entryButtons'>
+            <button id='deleteBtn-${entry.id}' class='button'>Delete Entry</button>
+            <button id='editBtn-${entry.id}' class='button'>Edit Entry</button>
+        </div>
     </div>
     `
     },
