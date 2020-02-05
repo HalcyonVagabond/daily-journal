@@ -33,6 +33,13 @@ const createHTML = {
         <button id='deleteBtn-${entry.id}' class='button'>Delete Entry</button>
     </div>
     `
+    },
+
+    createMoodFilter(mood) {
+        return `
+        <input type='radio' name='radio' id='filter-${mood}' value=${mood}>
+        <label for='radio'>${mood}</label>
+        `
     }
 }
 

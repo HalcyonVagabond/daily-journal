@@ -10,11 +10,12 @@ import addToDOM from "./entriesDOM.js"
 import eventListeners from "./eventListeners.js"
 import createJournalForm from "./mainDOM.js"
 import addToDom from "./entriesDOM.js"
-import filterFunctions from "./filter.js"
+
 
 
 // populating DOM with journal form
 createJournalForm()
+
 // naming the function that pulls all of my past entries from the database
 const pastEntries = () => dbAPI.getJournalEntries().then(entries => addToDOM.renderEntriesToDOM(entries))
 // calling pastEntries to where the page auto-populates with my past entries
@@ -23,12 +24,13 @@ pastEntries()
 // calling submit and delete event listeners
 
 eventListeners.submitEventListener()
-
 eventListeners.deleteEntryEventListener()
 
+// event listener for mood filter
 eventListeners.moodFilterEventListener()
+// function that dynamically adds mood filters
+addToDom.addMoodFilter()
 
-// addToDom.addMoodFilter()
 
 
 

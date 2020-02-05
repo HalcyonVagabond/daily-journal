@@ -40,13 +40,7 @@ const createJournalForm = () =>
     <div id="filterContainer">
         <fieldset id='filterByMood'>
         <legend>Filter Entries by Mood</legend>
-            <div id='radioButtons'>
-                <input type='radio' name='radio' value='Zen'>
-                <label for='radio'>Zen</label>
-                <input type='radio' name='radio' value='Calm'>
-                <label for='radio'>Calm</label>
-                <input type='radio' name='radio' value='Happy'>
-                <label for='radio'>Happy</label>
+            <div id='radioButtons'>  
             </div>
         </fieldset>  
     </div>

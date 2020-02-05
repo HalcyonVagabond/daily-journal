@@ -13,17 +13,22 @@ const addToDom = {
             const html = createHTML.createEntryComponent(entry)
             entryContainer.innerHTML += html;
          })
-    }
+    },
 
-    // addMoodFilter() {
-    //     // take array of entry objects and iterate through each
-    //     const entryArray = dbAPI.getJournalEntries().then(entryArr => console.log(entryArr))
-    //     entryArray.forEach(entry => {
-    //         const mood = entry.mood
-    //         const moodSelect 
-    //     })
-    //     // if an input for a mood does not exist, add mood radio button to filter fieldset
-    // },
+    addMoodFilter() {
+        // take array of entry objects and iterate through each
+        dbAPI.getJournalEntries().then(entryArray => {
+            entryArray.forEach(entry => {
+                const mood = entry.mood
+                const moodSelect = document.getElementById(`filter-${mood}`)
+                const filterButtonContainer = document.getElementById('radioButtons')
+                
+                if (moodSelect === null) {
+                    filterButtonContainer.innerHTML += createHTML.createMoodFilter(mood)
+                }
+            })
+        })
+    },
 
 
 }
