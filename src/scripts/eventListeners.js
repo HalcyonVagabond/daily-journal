@@ -2,23 +2,20 @@
 import dbAPI from "./data.js"
 import {createObjects, createHTML} from "./entryComponent.js"
 import addToDom from "./entriesDOM.js"
-
+import filterFunctions from "./filter.js"
 
 const entryContainer = document.getElementById('entryContainer');
-
-const entryDate = document.getElementById('journalDate')
-const entryConcepts = document.getElementById('conceptsCovered')
-const entryMain = document.getElementById('journalEntry')
-const entryMood = document.getElementById('moodForTheDay')
-
-const submitButton = document.getElementById('submit')
-
-
-
 
 const eventListeners = {
     
     submitEventListener () {
+        const submitButton = document.getElementById('submit')
+
+        const entryDate = document.getElementById('journalDate')
+        const entryConcepts = document.getElementById('conceptsCovered')
+        const entryMain = document.getElementById('journalEntry')
+        const entryMood = document.getElementById('moodForTheDay')
+
         submitButton.addEventListener('click', () => {
             // creating entry object
             const entryObject = createObjects.entryObjectFactory(entryDate.value, entryConcepts.value, entryMain.value, entryMood.value);
@@ -44,6 +41,16 @@ const eventListeners = {
                 .then(addToDom.renderEntriesToDOM)
             }
         })
+    },
+
+    moodFilterEventListener() {
+        const filterFieldset = document.getElementById('filterByMood');
+        filterFieldset.addEventListener('click', event => {
+
+            if (event.target.type == 'radio') {
+                filterFunctions.filterByMood(event.target.value)
+            };
+        });
     }
 }
 
