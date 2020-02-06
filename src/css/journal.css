@@ -77,10 +77,9 @@ nav a {
     margin-right: auto;
     height: 100%;
     width: 80%;
-    max-width: 650px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: aliceblue;
+    max-width: 450px;
+    padding: 20px;
+    background-color: rgba(240, 248, 255, 0.8);
     opacity: 80%;
     border: 1px solid black;
     border-radius: 15px;
@@ -91,11 +90,11 @@ fieldset {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(174,216,156,0.67);
+    background-color: rgba(174,216,156,0.8);
 }
 
 form {
@@ -130,6 +129,11 @@ legend {
 #filterContainer {
     margin-top: 15px;
 }
+#radioButtons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 /*  **** END Fieldset and Input **** */
 
@@ -141,11 +145,10 @@ legend {
     margin-right: auto;
     height: 100%;
     width: 80%;
-    max-width: 650px;
+    max-width: 550px;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: aliceblue;
-    opacity: 80%;
+    background-color: rgba(240, 248, 255, 0.8);
     border: 1px solid black;
     border-radius: 15px;
 
@@ -153,7 +156,7 @@ legend {
 .entry {
     border: 1px ridge black;
     border-radius: 15px;
-    background-color: rgba(174,216,156,0.80);
+    background-color: rgba(174,216,156);
     text-align: center;
     width: 76%;
     padding: 2%;
