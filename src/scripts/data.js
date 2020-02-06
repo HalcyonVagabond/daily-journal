@@ -18,6 +18,19 @@ const dbAPI = {
         return fetch(`${baseURL}/entries/${entryId}`, {
             method: "DELETE"
         })
+    },
+
+    retrieveEntry (entryId) {
+        return fetch(`${baseURL}/entries/${entryId}`)
+            .then(resp => resp.json())
+    },
+
+    updateEntry(entry) {
+        return fetch(`${baseURL}/entries/${entry.id}`, {
+                method: "PUT",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(entry)
+        })
     }
 }
 

@@ -41,6 +41,13 @@
       "entry": "Andy went through an example of posting recipes to a db and updating the DOM. Everything I struggled with for so long yesterday seems so much easier already. I think the issue I was having was calling the function in fetch requests as opposed to allowing .this to call it. It's working great now! Also, added delete functionality on the posts! Keep it up!",
       "mood": "Happy",
       "id": 12
+    },
+    {
+      "date": "2020-02-06",
+      "concepts": "Editing Stuff",
+      "entry": "Is this working properly?\nNow we will find out!\n\nWOW IT ACTUALLY WORKS!",
+      "mood": "Happy",
+      "id": 13
     }
   ]
 }

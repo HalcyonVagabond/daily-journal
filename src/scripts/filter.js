@@ -1,4 +1,4 @@
-import addToDom from "./entriesDOM.js" 
+import addToDOM from "./entriesToDOM.js" 
 import dbAPI from "./data.js"
 
 
@@ -9,7 +9,7 @@ const filterFunctions = {
         dbAPI.getJournalEntries().then(entries => {
             const filteredArray = entries.filter(entry => entry.mood === mood);
             
-            addToDom.renderEntriesToDOM(filteredArray) 
+            addToDOM.renderEntriesToDOM(filteredArray) 
         });
     }
 }
