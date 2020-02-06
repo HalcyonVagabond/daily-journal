@@ -44,9 +44,9 @@
     },
     {
       "date": "2020-02-06",
-      "concepts": "test",
-      "entry": "test",
-      "mood": "Calm",
+      "concepts": "Editing Stuff",
+      "entry": "Is this working properly?\nNow we will find out!\n\nWOW IT ACTUALLY WORKS!",
+      "mood": "Happy",
       "id": 13
     }
   ]

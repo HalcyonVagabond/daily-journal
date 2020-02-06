@@ -49,6 +49,7 @@ const createHTML = {
     createEntryEditForm (entryId) {
         return `
         <article id="editContainer-${entryId}">
+        <input type="hidden" id="hiddenEntryId" value="" />
         <form name="editForm" action="">
             <fieldset form="editForm" id="edit-date">
                 <label for="journalDate">Date of entry</label>

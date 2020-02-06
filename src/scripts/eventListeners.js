@@ -47,7 +47,7 @@ const eventListeners = {
 
     deleteEntryEventListener() {
         entriesContainer.addEventListener('click', (event) => {
-            console.log(event)
+        
             if (event.target.id.startsWith("deleteBtn")){
                 const entryId = event.target.id.split('-')[1];
                 dbAPI.deleteEntry(entryId)
@@ -59,7 +59,7 @@ const eventListeners = {
 
     editEntryEventListener() {
         entriesContainer.addEventListener('click', (event) => {
-            console.log(event)
+        
             if (event.target.id.startsWith("editBtn")){
                 const entryId = event.target.id.split('-')[1];
                 
@@ -70,6 +70,29 @@ const eventListeners = {
                 // .then(dbAPI.getJournalEntries)
                 // .then(addToDOM.renderEntriesToDOM)
             }
+        })
+    },
+
+    saveEditedEntryEventListener() {
+        entriesContainer.addEventListener('click', (event) => {
+     
+            if (event.target.id.startsWith("saveBtn")){
+                
+                const editedDate = document.getElementById("edit-journalDate").value
+                const editedConcepts = document.getElementById("edit-conceptsCovered").value
+                const editedEntry = document.getElementById("edit-journalEntry").value
+                const editedMood = document.getElementById("edit-MoodForTheDay").value
+                const editedId = document.getElementById("hiddenEntryId").value
+            
+                const editedEntryObject = createObjects.entryObjectFactory(editedDate, editedConcepts, editedEntry, editedMood)
+                editedEntryObject.id = parseInt(editedId)
+
+                dbAPI.updateEntry(editedEntryObject)
+                    .then(addToDOM.postEntriesToDOM)
+                
+            }
+                
+
         })
     }
 

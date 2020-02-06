@@ -4,6 +4,10 @@ import dbAPI from "./data.js"
 
 const addToDOM = {
 
+    postEntriesToDOM () {
+        dbAPI.getJournalEntries().then(entries => addToDOM.renderEntriesToDOM(entries))
+    },
+
     renderEntriesToDOM(arr) {
         const newArr = arr.reverse();
         const entriesContainer = document.getElementById('entriesContainer');
@@ -39,6 +43,8 @@ const addToDOM = {
         document.getElementById("edit-conceptsCovered").value = entry.concepts
         document.getElementById("edit-journalEntry").value = entry.entry
         document.getElementById("edit-MoodForTheDay").value = entry.mood
+        document.getElementById("hiddenEntryId").value = parseInt(entry.id)
+
     }
 
 
