@@ -2,6 +2,7 @@
 
 body {  
     /* background-image: #B5DAE7; */
+    font-family: monospace;
     background-image: url(/src/images/Tahoe.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -140,7 +141,7 @@ legend {
 
 /* ****** Begin Past-Entry Format ******* */
 
-#entryContainer {
+#entriesContainer {
     margin-left: auto;
     margin-right: auto;
     height: 100%;

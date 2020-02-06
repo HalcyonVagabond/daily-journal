@@ -18,6 +18,11 @@ const dbAPI = {
         return fetch(`${baseURL}/entries/${entryId}`, {
             method: "DELETE"
         })
+    },
+
+    retrieveEntry (id) {
+        return fetch(`${baseURL}/entries/${id}`)
+            .then(resp => resp.json())
     }
 }
 
