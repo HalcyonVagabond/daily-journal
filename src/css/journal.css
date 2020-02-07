@@ -73,7 +73,7 @@ nav a {
 
 #formContainer {
     margin-top: 140px;
-    margin-bottom: 80px;
+    margin-bottom: 65px;
     margin-left: auto;
     margin-right: auto;
     height: 100%;
@@ -81,7 +81,6 @@ nav a {
     max-width: 450px;
     padding: 20px;
     background-color: rgba(240, 248, 255, 0.8);
-    opacity: 80%;
     border: 1px solid black;
     border-radius: 15px;
 
@@ -95,7 +94,7 @@ fieldset {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(174,216,156,0.8);
+    background-color: rgba(174,216,156);
 }
 
 form {
@@ -179,6 +178,7 @@ legend {
 
 .entryConcept {
     /* border-top: 2px solid grey; */
+    padding: 4px;
     border-bottom: 2px solid grey;
     
 }
@@ -189,6 +189,7 @@ legend {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    padding: 4px;
 }
 
 /* ****** END Past-Entry Format ******** */

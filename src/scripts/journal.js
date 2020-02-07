@@ -1,11 +1,10 @@
 
 //  ************************************************
-//             Begin Journal Exercise 8
+//             Begin Journal Exercise 11
 // **************************************************
 
 // Importing Object Functions
 
-import dbAPI from "./data.js"
 import addToDOM from "./entriesToDOM.js"
 import eventListeners from "./eventListeners.js"
 

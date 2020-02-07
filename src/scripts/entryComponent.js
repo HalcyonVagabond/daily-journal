@@ -26,7 +26,7 @@ const createHTML = {
     createEntryComponent(entry) {
     return `
     <div class="entry" id="entry-${entry.id}">
-        ${this.entryHTML("h1", entry.date, "entryDate")}
+        ${this.entryHTML("h1", this.changeDateDisplay(entry.date), "entryDate")}
         ${this.entryHTML("h2", entry.concepts, "entryConcept")}
         ${this.entryHTML("p", entry.entry, "entryMain")}
         ${this.moodHTML("h2", entry.mood, "entryMood")}
@@ -36,6 +36,12 @@ const createHTML = {
         </div>
     </div>
     `
+    },
+
+    changeDateDisplay(date) {
+        const dateArr = date.split('-');
+        
+        return `${dateArr[2]}/${dateArr[1]}/${dateArr[0]}`
     },
 
     // function for creating mood radio buttons
