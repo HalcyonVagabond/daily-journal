@@ -24,6 +24,26 @@ header {
     
 }
 
+img {
+    width: 9%;
+}
+
+#head-1 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-left: 7%;
+    margin-top: 11px;
+}
+
+#head-2 {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-right: 7%;
+    margin-top: 11px;
+}
+
 /* top image commented out now that I have background image*/
 
 /* .banner-image { 
@@ -39,10 +59,11 @@ header h1 {
     text-align: center;
     /* text-shadow: 2px 2px 2px grey; */
     color: grey;
-    background-color: rgba(174,216,156,0.67);
+    background-color: rgba(174,216,156);
     border: 4px solid grey;
     box-shadow: 2px 2px 2px grey;
     width: 50%;
+    padding:9px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
