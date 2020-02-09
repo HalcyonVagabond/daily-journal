@@ -41,7 +41,7 @@ const createHTML = {
     changeDateDisplay(date) {
         const dateArr = date.split('-');
         
-        return `${dateArr[2]}/${dateArr[1]}/${dateArr[0]}`
+        return `${dateArr[1]}/${dateArr[2]}/${dateArr[0]}`
     },
 
     // function for creating mood radio buttons

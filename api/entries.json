@@ -1,21 +1,21 @@
 {
   "entries": [
     {
-      "date": "2020-18-01",
+      "date": "2020-01-18",
       "concepts": "Objects and Functions",
       "entry": "I am going to get this!",
       "mood": "Zen",
       "id": 1
     },
     {
-      "date": "2020-20-01",
+      "date": "2020-01-20",
       "concepts": "Creating Components",
       "entry": "I am going to get this!",
       "mood": "Excited",
       "id": 2
     },
     {
-      "date": "2020-21-01",
+      "date": "2020-01-21",
       "concepts": "APIs and Fetching",
       "entry": "I am going to get this!",
       "mood": "Zen",

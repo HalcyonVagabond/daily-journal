@@ -24,16 +24,13 @@ header {
     
 }
 
-img {
-    width: 9%;
-}
-
 #head-1 {
     position: fixed;
     left: 0;
     top: 0;
     margin-left: 7%;
     margin-top: 11px;
+    height: 92px;
 }
 
 #head-2 {
@@ -42,8 +39,23 @@ img {
     top: 0;
     margin-right: 7%;
     margin-top: 11px;
+    height: 92px;
 }
 
+
+button {
+    color: midnightblue;
+    opacity: none;
+    transition: 0.3s ease;
+    padding: 3px;
+    border-radius: 2px;
+}
+button:hover {
+    color: black;
+    background-color: antiquewhite;
+    padding:4px;
+    transition: 0.3s ease;
+}
 /* top image commented out now that I have background image*/
 
 /* .banner-image { 
@@ -136,7 +148,6 @@ form {
     margin-left: 40%;
     margin-right: auto;
     width: 100px;
-    height: 15px;
 }
 
 legend {
