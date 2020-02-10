@@ -1,11 +1,10 @@
 
 //  ************************************************
-//             Begin Journal Exercise 8
+//             Begin Journal Exercise 11
 // **************************************************
 
 // Importing Object Functions
 
-import dbAPI from "./data.js"
 import addToDOM from "./entriesToDOM.js"
 import eventListeners from "./eventListeners.js"
 
@@ -24,7 +23,8 @@ eventListeners.saveEditedEntryEventListener()
 eventListeners.moodFilterEventListener()
 // function that dynamically adds mood filters
 addToDOM.addMoodFilter()
-
+// search event listener
+eventListeners.searchEntryEventListener()
 
 
 

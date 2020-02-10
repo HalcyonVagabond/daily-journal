@@ -17,6 +17,10 @@
         <h1>
             JAM's Daily Journal
         </h1>
+        <div class="heads">
+            <a href="https://www.tarabrach.com/guided-meditations/" target="_blank"><img id='head-1' src="/src/images/MyHead.gif"></a>
+            <a href="https://www.geoguessr.com/trial-world/play" target="_blank"><img id='head-2' src="/src/images/MyHead.gif"></a>
+        </div>
         <!-- <nav id="main-nav">
                 <ul id="navigation">
                     <li><a href="#">Home</a></li>
@@ -27,24 +31,25 @@
             </nav> -->
     </header>
 
-      <!-- Journal Entry Form -->
+    <!-- Journal Entry Form -->
 
     <article id="formContainer">
+        <h1>Enter Journal Entry</h1>
         <form name="theForm" action="">
             <fieldset form="theForm" id="date">
-                <label for="journalDate">Date of entry</label>
+                <label class ='hidden' for="journalDate">Date of entry:</label>
                 <input type="date" name="journalDate" id="journalDate">
             </fieldset>
             <fieldset form="theForm" id="concepts">
-                <label for="conceptsCovered">Concepts covered</label>
-                <input type="text" name="conceptsCovered" id="conceptsCovered">
+                <label class ='hidden' for="conceptsCovered">Concepts covered:</label>
+                <input type="text" name="conceptsCovered" id="conceptsCovered" placeholder="Type Concepts Here">
             </fieldset>
             <fieldset form="theForm" id="mainEntry">
-                <label for="journalEntry">Journal Entry</label>
+                <label class ='hidden' for="journalEntry">Journal Entry:</label>
                 <textarea name="journalEntry" id="journalEntry" placeholder="Type Entry Here"></textarea>
             </fieldset>
             <fieldset form="theForm" id="mood">
-                <label for="moodForTheDay">Mood for the day</label>
+                <label class ='hidden' for="moodForTheDay">Mood for the day:</label>
                 <select name="moodForTheDay" id="moodForTheDay">
                     <option value="" selected disabled hidden>Select Mood</option>
                     <option>Zen</option>
@@ -65,17 +70,23 @@
             </fieldset>
         </form>
         <button id="submit" class="button" type="button" value="submit entry">Submit Entry</button>
-        <div id="filterContainer">
+        
+        <div id="searchContainer">
             <fieldset id='filterByMood'>
                 <legend>Filter Entries by Mood</legend>
                 <div id='radioButtons'>
                 </div>
             </fieldset>
+            <fieldset id="search">
+                <legend>Search Journal Entries</legend>
+                <input type="text" id="searchBar" placeholder="Search Here">
+            </fieldset>
         </div>
+
     </article>
     <!-- </article> -->
 
-    
+
     <!-- Past Entries -->
     <article id="entriesContainer">
 

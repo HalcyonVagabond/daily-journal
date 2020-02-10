@@ -1,4 +1,14 @@
 
+:root {
+    --primaryGreen: rgb(127, 168, 109);
+    --primaryGreenOpacity: rgba(127, 168, 109, 0.67);
+    --primaryBackGroundBlue: rgb(182, 199, 223);
+    --primaryBlue: rgb(220, 237, 250);
+    --primaryBlueOpacity: rgba(220, 237, 250, 0.8);
+
+    --borderColor: #c9c9c9;
+
+}
 
 body {  
     /* background-image: #B5DAE7; */
@@ -12,44 +22,75 @@ body {
 
 header {
     position: fixed;
-    background-color: aliceblue;
-    border: 1px ridge black;
-    box-shadow: 3px 3px 3px 3px grey;
+    background-color: var(--primaryBlue);
+    border-bottom: 1px ridge lightgray;
+    border-top: 6px solid var(--primaryBackGroundBlue);
+    box-shadow: 2px 2px 2px 2px grey;
     width: 98%;
     height: 100px;
     top: 0;
-    margin-top: 5px;
-    /* opacity: 0.8; */
+    margin-left: -7px;
+    padding-left: 10px;
     z-index: 1;
     
 }
 
-/* top image commented out now that I have background image*/
-
-/* .banner-image { 
-    position: absolute;
-    width: 100%;
-    border: 2px groove grey;
-    box-shadow: 2px 2px 2px grey;
-    z-index: -1;
-} */
-
-
 header h1 {
     text-align: center;
-    /* text-shadow: 2px 2px 2px grey; */
-    color: grey;
-    background-color: rgba(174,216,156,0.67);
-    border: 4px solid grey;
+    text-shadow: 2px 2px 2px grey;
+    color: var(--primaryBlue);
+    background-color: var(--primaryBackGroundBlue);
     box-shadow: 2px 2px 2px grey;
     width: 50%;
+    padding:9px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    top: 2px;
+    top: 5px;
 }
 
-nav ul {
+
+#head-1 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-left: 7%;
+    margin-top: 10px;
+    height: 92px;
+}
+
+#head-2 {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-right: 7%;
+    margin-top: 10px;
+    height: 92px;
+}
+
+@media (max-width: 500px) {
+    #head-1 { display: none; }
+    #head-2 { display: none; }
+}
+
+
+button {
+    color: midnightblue;
+    opacity: none;
+    transition: 0.3s ease;
+    padding: 3px;
+    border-radius: 2px;
+}
+button:hover {
+    color: black;
+    background-color: antiquewhite;
+    padding:4px;
+    transition: 0.3s ease;
+}
+
+/* Future Nav Bar */
+
+/* nav ul {
     display: flex;
     list-style: none;
     flex-wrap: wrap;
@@ -62,9 +103,9 @@ nav ul {
 nav a {
     color: grey;
     border: 2px solid grey;
-    background-color: #AED89C;
+    background-color: var(--primaryGreen);
     padding: 6px;
-}
+} */
 
 /* ******* END Header and NavBar ******* */
 
@@ -72,68 +113,132 @@ nav a {
 /* *** BEGIN Fieldset and Input *** */
 
 #formContainer {
-    margin-top: 140px;
-    margin-bottom: 80px;
+    margin-top: 155px;
+    margin-bottom: 65px;
     margin-left: auto;
     margin-right: auto;
     height: 100%;
     width: 80%;
     max-width: 450px;
     padding: 20px;
-    background-color: rgba(240, 248, 255, 0.8);
-    opacity: 80%;
-    border: 1px solid black;
+    background-color: var(--primaryBlueOpacity);
+    border: 2px ridge var(--borderColor);
     border-radius: 15px;
 
 }
 
-fieldset {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* border-radius: 15px; */
-    width: 90%;
+#formContainer h1 {
+    
+    background-color: antiquewhite;
+    border-radius: 2px;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(174,216,156,0.8);
+    width: 50%;
+    padding: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    /* border: 2px ridge black;
-    background-color:  rgba(174,216,156,0.67); */
     margin-left: auto;
     margin-right: auto;
-    /* width: 80%; */
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 5px;
     position: relative;
+    width: 80%;
+    border: 2px ridge var(--borderColor);
+    overflow: hidden;
+    background-color: var(--primaryBackGroundBlue);
 }
+
+fieldset {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--primaryBackGroundBlue);
+    border: 2px ridge var(--borderColor);
+}
+
+form fieldset {
+    border: none;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* position entry components */
+
+.hidden {
+    display: none;
+}
+
+
+form fieldset input {
+   margin-left: auto;
+   margin-right: auto;
+   width: 55%;
+   text-align: center;
+}
+
+form fieldset textarea {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 65%;
+    height: 55px;
+}
+
+form fieldset select {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 45%;
+}
+
 
 #submit { 
     text-align: center;
+    margin-top: 3px;
     margin-left: 40%;
     margin-right: auto;
     width: 100px;
-    height: 15px;
 }
 
 legend {
     background-color: antiquewhite;
 }
 
-#radioButtons {
+#filterByMood {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--primaryBackGroundBlue);
 }
-#filterContainer {
+
+#searchContainer {
     margin-top: 15px;
+}
+#searchContainer fieldset {
+    margin-top: 10px;
 }
 #radioButtons{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+#searchBar {
+    width: 50%;
 }
 
 /*  **** END Fieldset and Input **** */
@@ -149,15 +254,15 @@ legend {
     max-width: 550px;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: rgba(240, 248, 255, 0.8);
-    border: 1px solid black;
+    background-color: var(--primaryBlueOpacity);
+    border: 2px ridge var(--borderColor);
     border-radius: 15px;
 
 }
 .entry {
-    border: 1px ridge black;
+    border: 2px ridge var(--borderColor);
     border-radius: 15px;
-    background-color: rgba(174,216,156);
+    background-color: var(--primaryBackGroundBlue);
     text-align: center;
     width: 76%;
     padding: 2%;
@@ -178,7 +283,7 @@ legend {
 
 
 .entryConcept {
-    /* border-top: 2px solid grey; */
+    padding: 4px;
     border-bottom: 2px solid grey;
     
 }
@@ -189,6 +294,7 @@ legend {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    padding: 4px;
 }
 
 /* ****** END Past-Entry Format ******** */

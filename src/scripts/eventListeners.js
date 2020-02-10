@@ -35,7 +35,9 @@ const eventListeners = {
             } 
             
         });
-    }, moodFilterEventListener() {
+    }, 
+    
+    moodFilterEventListener() {
         const filterFieldset = document.getElementById('filterByMood');
         filterFieldset.addEventListener('click', event => {
 
@@ -43,6 +45,16 @@ const eventListeners = {
                 filterFunctions.filterByMood(event.target.value)
             };
         });
+    }, 
+    
+    searchEntryEventListener() {
+        const searchBar = document.getElementById('searchBar')
+
+        searchBar.addEventListener('keyup', (event) => {
+            if (event.key === "Enter") {
+                filterFunctions.findSearchedEntries(searchBar.value)
+            }
+        })
     },
 
     deleteEntryEventListener() {
