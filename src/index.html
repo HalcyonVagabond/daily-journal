@@ -71,7 +71,7 @@
         </form>
         <button id="submit" class="button" type="button" value="submit entry">Submit Entry</button>
         
-        <div id="searchContainer">
+        <!-- <div id="searchContainer">
             <fieldset id='filterByMood'>
                 <legend>Filter Entries by Mood</legend>
                 <div id='radioButtons'>
@@ -81,15 +81,29 @@
                 <legend>Search Journal Entries</legend>
                 <input type="text" id="searchBar" placeholder="Search Here">
             </fieldset>
-        </div>
+        </div> -->
 
     </article>
     <!-- </article> -->
 
 
     <!-- Past Entries -->
-    <article id="entriesContainer">
+    
+    <article id="previousEntriesContainer">
 
+        <div id="searchContainer">
+            <fieldset id="search">
+                <legend>Search Journal Entries</legend>
+                <input type="text" id="searchBar" placeholder="Search Here">
+            </fieldset>
+            <fieldset id='filterByMood'>
+                <legend>Filter Entries by Mood</legend>
+                <div id='radioButtons'>
+                </div>
+            </fieldset>
+        </div>
+        <div id="entriesContainer"></div>
+        
     </article>
 
     <script type="module" src="/src/scripts/journal.js"></script>

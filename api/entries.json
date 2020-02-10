@@ -62,6 +62,20 @@
       "entry": "Today we covered some more methods that are used with objects. These include .values .keys and .entries . . . Pretty cool! I used the .values to create the search function. Brian also taught us CSS variables. These are very handy and very cool!",
       "mood": "Happy",
       "id": 16
+    },
+    {
+      "date": "2020-02-10",
+      "concepts": "test",
+      "entry": "test",
+      "mood": "Calm",
+      "id": 17
+    },
+    {
+      "date": "2020-02-10",
+      "concepts": "Concepts",
+      "entry": "Hello this is fun!",
+      "mood": "Determined",
+      "id": 18
     }
   ]
 }
