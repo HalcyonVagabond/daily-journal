@@ -31,7 +31,8 @@ const dbAPI = {
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(entry)
         })
-    }
+    },
+
 }
 
 export default dbAPI

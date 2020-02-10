@@ -1,4 +1,12 @@
 
+:root {
+    --primaryGreen: rgb(127, 168, 109);
+    --primaryGreenOpacity: rgba(127, 168, 109, 0.67);
+    --primaryBackGroundBlue: rgb(182, 199, 223);
+    --primaryBlue: rgb(220, 237, 250);
+    --primaryBlueOpacity: rgba(220, 237, 250, 0.8);
+
+}
 
 body {  
     /* background-image: #B5DAE7; */
@@ -12,13 +20,15 @@ body {
 
 header {
     position: fixed;
-    background-color: aliceblue;
+    background-color: var(--primaryBlue);
     border: 1px ridge black;
     box-shadow: 3px 3px 3px 3px grey;
     width: 98%;
     height: 100px;
     top: 0;
-    margin-top: 5px;
+    margin-left: -7px;
+    padding-left: 10px;
+
     /* opacity: 0.8; */
     z-index: 1;
     
@@ -29,7 +39,7 @@ header {
     left: 0;
     top: 0;
     margin-left: 7%;
-    margin-top: 11px;
+    margin-top: 6px;
     height: 92px;
 }
 
@@ -38,8 +48,13 @@ header {
     right: 0;
     top: 0;
     margin-right: 7%;
-    margin-top: 11px;
+    margin-top: 6px;
     height: 92px;
+}
+
+@media (max-width: 500px) {
+    #head-1 { display: none; }
+    #head-2 { display: none; }
 }
 
 
@@ -70,9 +85,9 @@ button:hover {
 header h1 {
     text-align: center;
     /* text-shadow: 2px 2px 2px grey; */
-    color: grey;
-    background-color: rgba(174,216,156);
-    border: 4px solid grey;
+    color: var(--primaryBlue);
+    background-color: var(--primaryBackGroundBlue);
+    /* border: 2px ridge black; */
     box-shadow: 2px 2px 2px grey;
     width: 50%;
     padding:9px;
@@ -95,7 +110,7 @@ nav ul {
 nav a {
     color: grey;
     border: 2px solid grey;
-    background-color: #AED89C;
+    background-color: var(--primaryGreen);
     padding: 6px;
 }
 
@@ -105,7 +120,7 @@ nav a {
 /* *** BEGIN Fieldset and Input *** */
 
 #formContainer {
-    margin-top: 140px;
+    margin-top: 155px;
     margin-bottom: 65px;
     margin-left: auto;
     margin-right: auto;
@@ -113,7 +128,7 @@ nav a {
     width: 80%;
     max-width: 450px;
     padding: 20px;
-    background-color: rgba(240, 248, 255, 0.8);
+    background-color: var(--primaryBlueOpacity);
     border: 1px solid black;
     border-radius: 15px;
 
@@ -127,7 +142,7 @@ fieldset {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(174,216,156);
+    background-color: var(--primaryBackGroundBlue);
 }
 
 form {
@@ -154,12 +169,14 @@ legend {
     background-color: antiquewhite;
 }
 
-#radioButtons {
-    display: flex;
-    flex-direction: row;
-}
-#filterContainer {
+
+#searchContainer {
     margin-top: 15px;
+    /* display: flex;
+    flex-direction: row; */
+}
+#searchContainer fieldset {
+    margin-top: 10px;
 }
 #radioButtons{
     display: flex;
@@ -180,7 +197,7 @@ legend {
     max-width: 550px;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: rgba(240, 248, 255, 0.8);
+    background-color: var(--primaryBlueOpacity);
     border: 1px solid black;
     border-radius: 15px;
 
@@ -188,7 +205,7 @@ legend {
 .entry {
     border: 1px ridge black;
     border-radius: 15px;
-    background-color: rgba(174,216,156);
+    background-color: var(--primaryBackGroundBlue);
     text-align: center;
     width: 76%;
     padding: 2%;

@@ -23,7 +23,8 @@ eventListeners.saveEditedEntryEventListener()
 eventListeners.moodFilterEventListener()
 // function that dynamically adds mood filters
 addToDOM.addMoodFilter()
-
+// search event listener
+eventListeners.searchEntryEventListener()
 
 
 

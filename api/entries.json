@@ -55,6 +55,13 @@
       "entry": "I learned so much today! Wow, how cool! Andy spent the first half of the day showing us the process of editing database objects from the DOM. He showed the class how to do it in the original form at the top, but I was able to take it a step further and it the entry in the entry container. In fact, that is how I am typing this entry now! Very grateful to be learning so much :]",
       "mood": "Happy",
       "id": 14
+    },
+    {
+      "date": "2020-02-10",
+      "concepts": "Advanced Object Methods and CSS Variables",
+      "entry": "Today we covered some more methods that are used with objects. These include .values .keys and .entries . . . Pretty cool! I used the .values to create the search function. Brian also taught us CSS variables. These are very handy and very cool!",
+      "mood": "Happy",
+      "id": 16
     }
   ]
 }
