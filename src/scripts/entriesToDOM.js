@@ -19,11 +19,23 @@ const addToDOM = {
          })
     },
 
+    addMoodsToForm (container) {
+
+        container.innerHTML += `<option value="" selected disabled hidden>Select Mood</option>`
+        dbAPI.getMoods().then(moods => {
+            moods.forEach(moodObj => {
+                container.innerHTML += `
+                <option value=${moodObj.id}>${moodObj.label}</option>
+                `
+            })
+        });
+    },
+
     addMoodFilter() {
         // take array of entry objects and iterate through each
         dbAPI.getJournalEntries().then(entryArray => {
             entryArray.forEach(entry => {
-                const mood = entry.mood
+                const mood = entry.mood.label
                 const moodSelect = document.getElementById(`filter-${mood}`)
                 const filterButtonContainer = document.getElementById('radioButtons')
                 
@@ -42,7 +54,7 @@ const addToDOM = {
         document.getElementById("edit-journalDate").value = entry.date
         document.getElementById("edit-conceptsCovered").value = entry.concepts
         document.getElementById("edit-journalEntry").value = entry.entry
-        document.getElementById("edit-MoodForTheDay").value = entry.mood
+        document.getElementById("edit-moodForTheDay").value = entry.mood
         document.getElementById("hiddenEntryId").value = parseInt(entry.id)
 
     }

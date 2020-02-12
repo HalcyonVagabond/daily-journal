@@ -3,7 +3,7 @@ const baseURL = "http://localhost:8088"
 const dbAPI = {
 
     getJournalEntries () {
-        return fetch(`${baseURL}/entries`).then(response => response.json())
+        return fetch(`${baseURL}/entries?_expand=mood`).then(response => response.json())
     },
 
     postJournalEntries(newJournalEntry) {
@@ -32,6 +32,11 @@ const dbAPI = {
                 body: JSON.stringify(entry)
         })
     },
+
+    getMoods () {
+        return fetch(`${baseURL}/moods`)
+            .then(response => response.json())
+    }
 
 }
 

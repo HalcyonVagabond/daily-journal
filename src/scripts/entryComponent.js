@@ -1,12 +1,12 @@
 
 const createObjects = {
     // ****Function that creates entry object****
-    entryObjectFactory (date, concepts, entry, mood) {
+    entryObjectFactory (date, concepts, entry, moodId) {
         return {
             'date': date,
             'concepts': concepts,
             'entry': entry,
-            'mood': mood
+            'moodId': parseInt(moodId)
         }
     }
 }
@@ -29,7 +29,7 @@ const createHTML = {
         ${this.entryHTML("h1", this.changeDateDisplay(entry.date), "entryDate")}
         ${this.entryHTML("h2", entry.concepts, "entryConcept")}
         ${this.entryHTML("p", entry.entry, "entryMain")}
-        ${this.moodHTML("h2", entry.mood, "entryMood")}
+        ${this.moodHTML("h2", entry.mood.label, "entryMood")}
         <div class='entryButtons'>
             <button id='deleteBtn-${entry.id}' class='button'>Delete Entry</button>
             <button id='editBtn-${entry.id}' class='button'>Edit Entry</button>
@@ -71,22 +71,8 @@ const createHTML = {
             </fieldset>
             <fieldset form="editForm" id="edit-Mood">
                 <label for="moodForTheDay">Mood for the day</label>
-                <select name="moodForTheDay" id="edit-MoodForTheDay">
-                    <option value="" selected disabled hidden>Select Mood</option>
-                    <option>Zen</option>
-                    <option>Calm</option>
-                    <option>Determined</option>
-                    <option>Happy</option>
-                    <option>Hopeful</option>
-                    <option>Numb</option>
-                    <option>Fine</option>
-                    <option>Anxious</option>
-                    <option>Nervous</option>
-                    <option>Stressed</option>
-                    <option>Angry</option>
-                    <option>Sad</option>
-                    <option>Hallucinating</option>
-                    <option>Everything is FINE!!!</option>
+                <select name="moodForTheDay" id="edit-moodForTheDay">
+                    
                 </select>
             </fieldset>
         </form>

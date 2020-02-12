@@ -50,7 +50,7 @@ const eventListeners = {
     searchEntryEventListener() {
         const searchBar = document.getElementById('searchBar')
 
-        searchBar.addEventListener('keyup', (event) => {
+        searchBar.addEventListener('keyup', () => {
             if (event.key === "Enter") {
                 filterFunctions.findSearchedEntries(searchBar.value)
             }
@@ -76,7 +76,13 @@ const eventListeners = {
                 const entryId = event.target.id.split('-')[1];
                 
                 dbAPI.retrieveEntry(entryId)
-                    .then(entry => addToDOM.editFormEntry(entry));
+                    .then(entry => {
+                        addToDOM.editFormEntry(entry)
+
+                        const moodSelectContainer = document.getElementById('edit-moodForTheDay')
+
+                        addToDOM.addMoodsToForm(moodSelectContainer)
+                    });
 
 
                 // .then(dbAPI.getJournalEntries)
@@ -93,7 +99,7 @@ const eventListeners = {
                 const editedDate = document.getElementById("edit-journalDate").value
                 const editedConcepts = document.getElementById("edit-conceptsCovered").value
                 const editedEntry = document.getElementById("edit-journalEntry").value
-                const editedMood = document.getElementById("edit-MoodForTheDay").value
+                const editedMood = document.getElementById("edit-moodForTheDay").value
                 const editedId = document.getElementById("hiddenEntryId").value
             
                 const editedEntryObject = createObjects.entryObjectFactory(editedDate, editedConcepts, editedEntry, editedMood)

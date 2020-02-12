@@ -1,15 +1,16 @@
 
 //  ************************************************
-//             Begin Journal Exercise 11
+//             Begin Journal Exercise 12
 // **************************************************
 
 // Importing Object Functions
 
 import addToDOM from "./entriesToDOM.js"
 import eventListeners from "./eventListeners.js"
+import dbAPI from "./data.js"
 
-
-
+const moodSelectContainer = document.getElementById('moodForTheDay')
+addToDOM.addMoodsToForm(moodSelectContainer)
 // calling pastEntries to where the page auto-populates with my past entries
 addToDOM.postEntriesToDOM()
 
@@ -27,4 +28,6 @@ addToDOM.addMoodFilter()
 eventListeners.searchEntryEventListener()
 
 
-
+// function addingTeachersToDb() {
+//     dbAPI
+// }

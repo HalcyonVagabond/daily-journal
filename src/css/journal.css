@@ -8,6 +8,8 @@
 
     --borderColor: #c9c9c9;
 
+    --textColor: #5f6574;
+
 }
 
 body {  
@@ -128,7 +130,7 @@ nav a {
 }
 
 #formContainer h1 {
-    
+    color: var(--textColor);
     background-color: antiquewhite;
     border-radius: 2px;
     margin-left: auto;
@@ -200,6 +202,7 @@ form fieldset select {
     margin-top: 3px;
     margin-bottom: 3px;
     width: 45%;
+    text-align: center;
 }
 
 
@@ -234,6 +237,7 @@ legend {
     width: 76%;
 }
 #radioButtons{
+    color: var(--textColor);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -274,6 +278,10 @@ legend {
     margin-bottom: 20px;
 }
 
+.entry h2 {
+    color: black;
+}
+
 .entryDate {
     background-color: antiquewhite;
     border: 1px solid black;
@@ -298,5 +306,10 @@ legend {
     margin-right: auto;
     padding: 4px;
 }
+
+form fieldset label {
+   display: none;
+}
+
 
 /* ****** END Past-Entry Format ******** */
