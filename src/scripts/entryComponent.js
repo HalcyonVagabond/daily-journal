@@ -1,12 +1,13 @@
 
 const createObjects = {
     // ****Function that creates entry object****
-    entryObjectFactory (date, concepts, entry, moodId) {
+    entryObjectFactory (date, concepts, entry, moodId, instructorId) {
         return {
             'date': date,
             'concepts': concepts,
             'entry': entry,
-            'moodId': parseInt(moodId)
+            'moodId': parseInt(moodId),
+            'instructorId': parseInt(instructorId)
         }
     }
 }
@@ -17,9 +18,6 @@ const createHTML = {
     entryHTML(tag, content, className) {
         return `<${tag} class='${className}'>${content}</${tag}>`;
     },
-    moodHTML(tag, content, className) {
-        return `<${tag} class='${className}'>Mood = "${content}"</${tag}>`
-    },
 
     // ***Function for whole entry component***
 
@@ -29,7 +27,8 @@ const createHTML = {
         ${this.entryHTML("h1", this.changeDateDisplay(entry.date), "entryDate")}
         ${this.entryHTML("h2", entry.concepts, "entryConcept")}
         ${this.entryHTML("p", entry.entry, "entryMain")}
-        ${this.moodHTML("h2", entry.mood.label, "entryMood")}
+        ${this.entryHTML("h3", `Mood: ${entry.mood.label}`, "entryMood")}
+        ${this.entryHTML("h3", `Primary Instructor: ${entry.instructor.firstName}`, "entryInstructor")}
         <div class='entryButtons'>
             <button id='deleteBtn-${entry.id}' class='button'>Delete Entry</button>
             <button id='editBtn-${entry.id}' class='button'>Edit Entry</button>
@@ -73,6 +72,14 @@ const createHTML = {
                 <label for="moodForTheDay">Mood for the day</label>
                 <select name="moodForTheDay" id="edit-moodForTheDay">
                     
+                </select>
+            </fieldset>
+            <fieldset>
+                <select name="mainInstructor" id="edit-mainInstructor">
+                    <option value="" selected disabled hidden>Select Main Instructor</option>
+                    <option value=1>Andy</option>
+                    <option value=2>Bryan</option>
+                    <option value=3>Kristen</option>
                 </select>
             </fieldset>
         </form>

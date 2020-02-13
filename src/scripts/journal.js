@@ -28,6 +28,58 @@ addToDOM.addMoodFilter()
 eventListeners.searchEntryEventListener()
 
 
-// function addingTeachersToDb() {
-//     dbAPI
+
+
+
+
+
+
+
+
+// ****Successfully dynamically added instructorId key:value pair to entries, but messed up with the getEntries and added expanded mood key:value
+
+// function addingInstructorsToDb() {
+//     dbAPI.getJournalEntries().then(entries => {
+//         const arrWithInstructor = []
+        
+//         entries.forEach(entryObj => {
+//             const instructorKey = "instructorId"
+//             const instructorValue = 1
+
+//             entryObj[instructorKey] = instructorValue
+            
+//             arrWithInstructor.push(entryObj)
+//         })
+        
+//         arrWithInstructor.forEach(entry => {
+//             dbAPI.updateEntry(entry)
+//         })
+//     })
 // }
+
+// addingInstructorsToDb()
+
+
+// **** Delete mood key:value pair from all entries
+
+// function deleteMood () {
+
+//     // temporarily altered getJournalEntries to where it wouldn't expand mood
+//     // except I didn't save, but it worked anyways! Interesting!
+
+
+//     dbAPI.getJournalEntries().then(entries => {
+//         const noMoodArray = entries.map(entry => {
+//             delete entry.mood
+//             return entry
+//         });
+
+//         noMoodArray.forEach(entry => {
+//             dbAPI.updateEntry(entry)
+//         })
+//     });
+// }
+
+// deleteMood()
+
+// SUCCESS!!!!!!!

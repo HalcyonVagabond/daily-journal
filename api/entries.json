@@ -5,20 +5,23 @@
       "concepts": "Objects and Functions",
       "entry": "I am going to get this!",
       "moodId": 3,
-      "id": 1
+      "id": 1,
+      "instructorId": 1
     },
     {
       "date": "2020-01-20",
       "concepts": "Creating Components",
       "entry": "I am going to get this!",
       "moodId": 1,
-      "id": 2
+      "id": 2,
+      "instructorId": 1
     },
     {
       "date": "2020-01-21",
       "concepts": "APIs and Fetching",
       "entry": "I am going to get this!",
       "moodId": 3,
+      "instructorId": 3,
       "id": 3
     },
     {
@@ -26,6 +29,7 @@
       "concepts": ".map, .filter, and .reduce methods",
       "entry": "I am glad that I have some background in Ruby, because these concepts weren't too difficult to comprehend.\n",
       "moodId": 3,
+      "instructorId": 2,
       "id": 4
     },
     {
@@ -33,48 +37,55 @@
       "concepts": "POST to DB and update DOM",
       "entry": "Man, this has been one of the most difficult challenges yet. This post is my first one where I will hit submit and it will post to the db and update on the DOM automatically. I've been working all day, my eyes are tired, and my code is a mess . . . but I did it! I'll clean up the code tomorrow. Good job JAM :)",
       "moodId": 5,
-      "id": 11
+      "id": 11,
+      "instructorId": 1
     },
     {
       "date": "2020-02-04",
       "concepts": "More JSON POST and update +  DELETE",
       "entry": "Andy went through an example of posting recipes to a db and updating the DOM. Everything I struggled with for so long yesterday seems so much easier already. I think the issue I was having was calling the function in fetch requests as opposed to allowing .this to call it. It's working great now! Also, added delete functionality on the posts! Keep it up!",
       "moodId": 2,
-      "id": 12
+      "id": 12,
+      "instructorId": 1
     },
     {
       "date": "2020-02-06",
       "concepts": "Editing Stuff",
       "entry": "Is this working properly?\nNow we will find out!\n\nWOW IT ACTUALLY WORKS!\n\nSlap me, I must be dreaming . . .",
       "moodId": 2,
-      "id": 13
+      "id": 13,
+      "instructorId": 1
     },
     {
       "date": "2020-02-06",
       "concepts": "Editing Database Objects",
       "entry": "I learned so much today! Wow, how cool! Andy spent the first half of the day showing us the process of editing database objects from the DOM. He showed the class how to do it in the original form at the top, but I was able to take it a step further and it the entry in the entry container. In fact, that is how I am typing this entry now! Very grateful to be learning so much :]",
       "moodId": 2,
-      "id": 14
+      "id": 14,
+      "instructorId": 1
     },
     {
       "date": "2020-02-10",
       "concepts": "Advanced Object Methods and CSS Variables",
-      "entry": "Today we covered some more methods that are used with objects. These include .values .keys and .entries . . . Pretty cool! I used the .values to create the search function. Brian also taught us CSS variables. These are very handy and very cool!",
+      "entry": "Today we covered some more methods that are used with objects. These include .values .keys and .entries . . . Pretty cool! I used the .values to create the search function. Bryan also taught us CSS variables. These are very handy and very cool!",
       "moodId": 2,
+      "instructorId": 2,
       "id": 16
     },
     {
       "date": "2020-02-11",
       "concepts": "Joining Data from different db resources",
-      "entry": "We learned so much today how cool! I am adding new words.",
-      "moodId": 5,
+      "entry": "This is an interesting concept. As opposed to repeating a categorizing key:value pair in each object, we are creating a new resource with the values and referencing them with ids. This could get confusing, but I see the merit in it. Saves time, memory, and resources. ",
+      "moodId": 4,
+      "instructorId": 3,
       "id": 17
     },
     {
       "date": "2020-02-12",
-      "concepts": "test",
-      "entry": "test",
+      "concepts": "Success with last Journal Assignment",
+      "entry": "I was able to complete Daily Journal assignment 12, the last one. I am sad to see the problems go, but I will keep using this as an actual journal for my time here at NSS. The moods are now dynamically generated, instructors were added, and both are contained and referenced in separate resources within the JSON. I had to refactor a bunch, but everything works again!",
       "moodId": 5,
+      "instructorId": 1,
       "id": 18
     }
   ],
@@ -104,7 +115,6 @@
       "id": 6
     }
   ],
-
   "instructors": [
     {
       "firstName": "Andy",

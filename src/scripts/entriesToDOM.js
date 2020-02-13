@@ -1,10 +1,10 @@
-import {createHTML, createObjects} from "./entryComponent.js"
+import { createHTML, createObjects } from "./entryComponent.js"
 import dbAPI from "./data.js"
 
 
 const addToDOM = {
 
-    postEntriesToDOM () {
+    postEntriesToDOM() {
         dbAPI.getJournalEntries().then(entries => addToDOM.renderEntriesToDOM(entries))
     },
 
@@ -16,13 +16,13 @@ const addToDOM = {
         newArr.forEach(entry => {
             const html = createHTML.createEntryComponent(entry)
             entriesContainer.innerHTML += html;
-         })
+        })
     },
 
-    addMoodsToForm (container) {
+    addMoodsToForm(container) {
 
         container.innerHTML += `<option value="" selected disabled hidden>Select Mood</option>`
-        dbAPI.getMoods().then(moods => {
+        return dbAPI.getMoods().then(moods => {
             moods.forEach(moodObj => {
                 container.innerHTML += `
                 <option value=${moodObj.id}>${moodObj.label}</option>
@@ -38,7 +38,7 @@ const addToDOM = {
                 const mood = entry.mood.label
                 const moodSelect = document.getElementById(`filter-${mood}`)
                 const filterButtonContainer = document.getElementById('radioButtons')
-                
+
                 if (moodSelect === null) {
                     filterButtonContainer.innerHTML += createHTML.createMoodFilter(mood)
                 }
@@ -50,16 +50,19 @@ const addToDOM = {
         const entryContainer = document.getElementById(`entry-${entry.id}`);
 
         entryContainer.innerHTML = createHTML.createEntryEditForm(entry.id)
+        const moodSelectContainer = document.getElementById('edit-moodForTheDay')
 
-        document.getElementById("edit-journalDate").value = entry.date
-        document.getElementById("edit-conceptsCovered").value = entry.concepts
-        document.getElementById("edit-journalEntry").value = entry.entry
-        document.getElementById("edit-moodForTheDay").value = entry.mood
-        document.getElementById("hiddenEntryId").value = parseInt(entry.id)
+        addToDOM.addMoodsToForm(moodSelectContainer)
+            .then(() => {
+                document.getElementById("edit-journalDate").value = entry.date
+                document.getElementById("edit-conceptsCovered").value = entry.concepts
+                document.getElementById("edit-journalEntry").value = entry.entry
+                document.getElementById("edit-moodForTheDay").value = entry.moodId
+                document.getElementById("edit-mainInstructor").value = entry.instructorId
+                document.getElementById("hiddenEntryId").value = parseInt(entry.id)
 
+            })
     }
-
-
 }
 
 export default addToDOM
