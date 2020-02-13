@@ -51,27 +51,21 @@
             <fieldset form="theForm" id="mood">
                 <label class ='hidden' for="moodForTheDay">Mood for the day:</label>
                 <select name="moodForTheDay" id="moodForTheDay">
-                    <option value="" selected disabled hidden>Select Mood</option>
-                    <option>Zen</option>
-                    <option>Calm</option>
-                    <option>Determined</option>
-                    <option>Happy</option>
-                    <option>Hopeful</option>
-                    <option>Numb</option>
-                    <option>Fine</option>
-                    <option>Anxious</option>
-                    <option>Nervous</option>
-                    <option>Stressed</option>
-                    <option>Angry</option>
-                    <option>Sad</option>
-                    <option>Hallucinating</option>
-                    <option>Everything is FINE!!!</option>
+                    
+                </select>
+            </fieldset>
+            <fieldset>
+                <select name="mainInstructor" id="mainInstructor">
+                    <option value="" selected disabled hidden>Select Main Instructor</option>
+                    <option value=1>Andy</option>
+                    <option value=2>Bryan</option>
+                    <option value=3>Kristen</option>
                 </select>
             </fieldset>
         </form>
         <button id="submit" class="button" type="button" value="submit entry">Submit Entry</button>
         
-        <div id="searchContainer">
+        <!-- <div id="searchContainer">
             <fieldset id='filterByMood'>
                 <legend>Filter Entries by Mood</legend>
                 <div id='radioButtons'>
@@ -81,15 +75,29 @@
                 <legend>Search Journal Entries</legend>
                 <input type="text" id="searchBar" placeholder="Search Here">
             </fieldset>
-        </div>
+        </div> -->
 
     </article>
     <!-- </article> -->
 
 
     <!-- Past Entries -->
-    <article id="entriesContainer">
+    
+    <article id="previousEntriesContainer">
 
+        <div id="searchContainer">
+            <fieldset id="search">
+                <legend>Search Journal Entries</legend>
+                <input type="text" id="searchBar" placeholder="Search Here">
+            </fieldset>
+            <fieldset id='filterByMood'>
+                <legend>Filter Entries by Mood</legend>
+                <div id='radioButtons'>
+                </div>
+            </fieldset>
+        </div>
+        <div id="entriesContainer"></div>
+        
     </article>
 
     <script type="module" src="/src/scripts/journal.js"></script>

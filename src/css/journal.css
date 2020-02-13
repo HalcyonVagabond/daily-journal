@@ -8,6 +8,8 @@
 
     --borderColor: #c9c9c9;
 
+    --textColor: #5f6574;
+
 }
 
 body {  
@@ -128,7 +130,7 @@ nav a {
 }
 
 #formContainer h1 {
-    
+    color: var(--textColor);
     background-color: antiquewhite;
     border-radius: 2px;
     margin-left: auto;
@@ -200,12 +202,13 @@ form fieldset select {
     margin-top: 3px;
     margin-bottom: 3px;
     width: 45%;
+    text-align: center;
 }
 
 
 #submit { 
     text-align: center;
-    margin-top: 3px;
+    margin-top: 15px;
     margin-left: 40%;
     margin-right: auto;
     width: 100px;
@@ -227,11 +230,14 @@ legend {
 
 #searchContainer {
     margin-top: 15px;
+    margin-bottom: 33px;
 }
 #searchContainer fieldset {
     margin-top: 10px;
+    width: 76%;
 }
 #radioButtons{
+    color: var(--textColor);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -246,7 +252,7 @@ legend {
 
 /* ****** Begin Past-Entry Format ******* */
 
-#entriesContainer {
+#previousEntriesContainer {
     margin-left: auto;
     margin-right: auto;
     height: 100%;
@@ -272,6 +278,10 @@ legend {
     margin-bottom: 20px;
 }
 
+.entry h2 {
+    color: black;
+}
+
 .entryDate {
     background-color: antiquewhite;
     border: 1px solid black;
@@ -290,11 +300,17 @@ legend {
 
 .entryMood{
     border-top: 2px solid grey;
-    border-bottom: 2px solid grey;
+    /* border-bottom: 2px solid grey; */
     width: 80%;
+    margin-top: 17px;
     margin-left: auto;
     margin-right: auto;
-    padding: 4px;
+    padding-top: 15px;
 }
+
+form fieldset label {
+   display: none;
+}
+
 
 /* ****** END Past-Entry Format ******** */
